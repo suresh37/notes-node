@@ -15,10 +15,13 @@ else if (command == 'list') {
     notes.getAll()
 }
 else if (command == 'read') {
-    notes.getNote(argv.title,argv.body)
+    notes.getNote(argv.title)
 }
 else if(command == 'remove'){
-    notes.removeNote(argv.title,argv.body)
+    notes.removeNote(argv.title)
+}
+else if(command == 'update'){
+    notes.updateNote(argv.title,argv.body)
 }
 else {
     console.log('Command not recognised')
